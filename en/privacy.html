@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PageCat</title>
+  <link rel="alternate" hreflang="zh" href="https://buildingithub.github.io/pagecat-site/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://buildingithub.github.io/pagecat-site/en/privacy.html">
+  <style>
+    :root {
+      --paper: #FAF5EB;
+      --card: #FFFDF8;
+      --ink: #3B2B20;
+      --ink-2: #8A7460;
+      --matcha: #6F8F5E;
+      --matcha-deep: #55744A;
+      --line: #E5D5BC;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+      font-size: 15px;
+      background-image: radial-gradient(rgba(59, 43, 32, .028) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    a { color: var(--matcha-deep); }
+    .back {
+      font-family: ui-monospace, "Cascadia Mono", monospace;
+      font-size: 13px; text-decoration: none; display: inline-block; margin-bottom: 28px;
+      color: var(--ink-2);
+    }
+    .back:hover { color: var(--matcha-deep); }
+    .lang-switch {
+      font-family: ui-monospace, "Cascadia Mono", monospace; font-size: 12px;
+      color: var(--matcha-deep); border: 1.5px solid var(--matcha);
+      padding: 1px 9px; border-radius: 999px; text-decoration: none;
+    }
+    .lang-switch:hover { background: var(--card); }
+    .eyebrow {
+      font-family: ui-monospace, "Cascadia Mono", monospace;
+      font-size: 12px; letter-spacing: 3px; color: var(--matcha-deep);
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--matcha); }
+    h1 { font-size: 30px; font-weight: 900; margin-bottom: 6px; }
+    .updated { color: var(--ink-2); font-size: 13px; margin-bottom: 34px; font-family: ui-monospace, "Cascadia Mono", monospace; }
+    h2 { font-size: 18px; font-weight: 800; margin: 32px 0 10px; padding-top: 20px; border-top: 2px dashed var(--line); }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p { margin-bottom: 12px; }
+    ul { margin: 0 0 12px 22px; }
+    li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+    th, td { text-align: left; padding: 9px 12px; border: 1.5px solid var(--line); vertical-align: top; }
+    th { background: var(--card); font-family: ui-monospace, "Cascadia Mono", monospace; font-size: 12.5px; }
+    code { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
+    .zh { margin-top: 50px; padding: 24px 26px; background: var(--card); border: 1.5px solid var(--ink); border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px; font-size: 14px; color: var(--ink-2); }
+    .zh h2 { border-top: none; padding-top: 0; margin-top: 0; }
+    a:focus-visible { outline: 3px solid #C98A4B; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← back to PageCat</a> <a class="lang-switch" href="../privacy.html">中文</a>
+
+    <span class="eyebrow">PRIVACY</span>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 2026-09-17 · applies to the PageCat browser extension</p>
+
+    <p>We take your privacy seriously. This policy explains what PageCat collects, what it does not, and how data flows. <strong>The short version: PageCat has no servers of its own — it collects, stores, and sells no user data.</strong></p>
+
+    <h2>1. What we collect</h2>
+    <p>Nothing. PageCat has no account system, no analytics, and no ad SDKs — there is no data collection operated by us.</p>
+
+    <h2>2. How data flows</h2>
+    <p>The following data exists only <strong>when you trigger the matching feature</strong>, and is sent directly from your browser to the service you configured. PageCat never relays or retains it:</p>
+    <ul>
+      <li><strong>Translate on select</strong>: the text you highlight is sent to a translation endpoint (by default public services Google Translate / MyMemory; changeable in settings).</li>
+      <li><strong>Page summary / AI chat</strong>: the body text of the current page is sent to <strong>the AI endpoint you configure yourself</strong> (e.g. DeepSeek, Zhipu GLM, or any OpenAI-compatible service). Which provider receives it is entirely your choice.</li>
+    </ul>
+    <p>These requests go straight from your browser to the provider and are governed by that provider's own privacy policy.</p>
+
+    <h2>3. Local storage</h2>
+    <p>The following is kept in local browser storage (<code>chrome.storage.local</code>) purely to run the features, and is never uploaded:</p>
+    <ul>
+      <li>Preferences (target language, trigger mode, pet size, etc.)</li>
+      <li>The AI endpoint URL and API key you enter (stored locally only — avoid on shared computers)</li>
+      <li>Interface state such as the pet's docked position</li>
+    </ul>
+    <p>Uninstalling the extension removes all local data.</p>
+
+    <h2>4. Browser permissions</h2>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th></tr>
+      <tr><td>storage</td><td>Save your settings locally</td></tr>
+      <tr><td>activeTab / scripting</td><td>Read the current tab's content when you translate or summarize, at your request only</td></tr>
+      <tr><td>contextMenus</td><td>Provide right-click menu shortcuts</td></tr>
+      <tr><td>sidePanel</td><td>Show the page summary in the browser side panel</td></tr>
+      <tr><td>Network access (http/https)</td><td>Reach the AI and translation endpoints you configure; AI URLs are user-defined, so they cannot be pre-restricted to specific domains</td></tr>
+    </table>
+
+    <h2>5. Third-party services</h2>
+    <p>Translation and AI capabilities come from third-party providers (Google, MyMemory, DeepSeek, Zhipu, etc., depending on your configuration). Those providers may process request content under their own policies — please refer to them.</p>
+
+    <h2>6. Data sales and advertising</h2>
+    <p>PageCat sells no data, shows no ads, and performs no user tracking.</p>
+
+    <h2>7. Children</h2>
+    <p>PageCat is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+    <h2>8. Changes</h2>
+    <p>If this policy changes materially, we will update the date at the top and note it in the extension's release notes.</p>
+
+    <h2>9. Contact</h2>
+    <p>Via GitHub Issues at <a href="https://github.com/BuildInGitHub">BuildInGitHub</a>.</p>
+
+    <div class="zh">
+      <h2>隐私政策摘要（中文）</h2>
+      <p>页猫是一款没有自有服务器的浏览器扩展：不收集、不存储、不出售任何用户数据——无账号、无埋点、无广告。当你触发功能时，选中文本或页面内容仅从你的浏览器直连发送到翻译服务（默认 Google Translate / MyMemory）或<strong>你自行配置的 AI 接口</strong>（如 DeepSeek、智谱 GLM）。设置与 API Key 仅保存在浏览器本地（<code>chrome.storage.local</code>），卸载扩展即全部删除。浏览器权限仅用于上述功能。联系方式：GitHub Issues。<a href="../privacy.html">完整中文版 →</a></p>
+    </div>
+  </div>
+</body>
+</html>

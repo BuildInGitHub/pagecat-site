@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>页猫 PageCat — 你的浏览器，缺一只猫</title>
-  <meta name="description" content="页猫：划词即译、长文摘要、蹲在角落提醒你休息的浏览器小猫。没有服务器，Key 自己填，数据不出你的电脑。">
+  <title>PageCat — Your browser is missing a cat</title>
+  <meta name="description" content="PageCat: translate on select, summarize long pages, and a little cat that reminds you to rest. No servers — your key, your data, your computer.">
   <link rel="alternate" hreflang="zh" href="https://buildingithub.github.io/pagecat-site/">
   <link rel="alternate" hreflang="en" href="https://buildingithub.github.io/pagecat-site/en/">
   <style>
@@ -24,17 +24,15 @@
     body {
       background: var(--paper);
       color: var(--ink);
-      font-family: "PingFang SC", "MiSans", "Microsoft YaHei", "Segoe UI", sans-serif;
-      line-height: 1.7;
+      font-family: "Segoe UI", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
       font-size: 16px;
-      /* 纸张的细密颗粒 */
       background-image: radial-gradient(rgba(59, 43, 32, .028) 1px, transparent 1px);
       background-size: 22px 22px;
     }
     a { color: var(--matcha-deep); }
     .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 
-    /* 摇线边框：手绘贴纸感的来源，全站只用在按钮 / 演示窗 / 功能小卡 */
     .wobble {
       border: 2px solid var(--ink);
       border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
@@ -42,10 +40,10 @@
 
     /* ============ nav ============ */
     nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0 14px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: 1px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: .5px; }
     .brand svg { display: block; }
     .brand small { font-weight: 500; color: var(--ink-2); font-size: 12px; font-family: ui-monospace, "Cascadia Mono", monospace; }
-    nav .links { display: flex; gap: 20px; font-size: 14px; font-family: ui-monospace, "Cascadia Mono", monospace; }
+    nav .links { display: flex; gap: 20px; font-size: 14px; font-family: ui-monospace, "Cascadia Mono", monospace; align-items: center; }
     nav .links a { text-decoration: none; color: var(--ink-2); }
     nav .links a:hover, nav .links a:focus-visible { color: var(--matcha-deep); }
     nav .links .lang { color: var(--matcha-deep); border: 1.5px solid var(--matcha); padding: 1px 9px; border-radius: 999px; }
@@ -68,18 +66,13 @@
     .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--matcha); }
     h1 {
       font-size: clamp(32px, 4.6vw, 48px);
-      line-height: 1.22;
+      line-height: 1.15;
       font-weight: 900;
-      letter-spacing: .5px;
       margin-bottom: 16px;
     }
-    h1 .squig {
-      position: relative; white-space: nowrap;
-    }
-    h1 .squig svg {
-      position: absolute; left: 0; right: 0; bottom: -6px; width: 100%; height: 9px;
-    }
-    .hero p.sub { font-size: 16.5px; color: var(--ink-2); max-width: 30em; margin-bottom: 28px; }
+    h1 .squig { position: relative; white-space: nowrap; }
+    h1 .squig svg { position: absolute; left: 0; right: 0; bottom: -6px; width: 100%; height: 9px; }
+    .hero p.sub { font-size: 16.5px; color: var(--ink-2); max-width: 32em; margin-bottom: 28px; }
     .hero p.sub b { color: var(--ink); font-weight: 600; }
 
     .cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
@@ -99,16 +92,7 @@
       font-family: ui-monospace, "Cascadia Mono", monospace;
     }
 
-    /* 竖排导引：跟着爪印走 */
-    .vertical-cue {
-      position: absolute; right: -6px; top: 120px;
-      writing-mode: vertical-rl; letter-spacing: 10px;
-      font-size: 13px; color: var(--ink-2);
-      display: flex; align-items: center; gap: 8px;
-    }
-    .vertical-cue svg { transform: rotate(90deg); }
-
-    /* ============ 演示窗（签名元素） ============ */
+    /* ============ demo window ============ */
     .demo-window {
       background: var(--card);
       box-shadow: 6px 8px 0 rgba(59, 43, 32, .12);
@@ -134,12 +118,8 @@
     .demo-body .fake-line.w85 { width: 85%; }
     .demo-body .fake-line.w40 { width: 40%; }
 
-    .demo-sentence {
-      font-size: 19px; margin: 20px 0 8px; line-height: 1.8;
-      font-family: Georgia, "Times New Roman", serif;
-    }
+    .demo-sentence { font-size: 19px; margin: 20px 0 8px; line-height: 1.8; }
     .demo-sentence .phrase { position: relative; padding: 1px 2px; }
-    /* 划词高亮：黄色扫过 */
     .demo-sentence .phrase::after {
       content: ""; position: absolute; inset: 0; z-index: -1;
       background: var(--sel); border-radius: 4px;
@@ -153,7 +133,6 @@
       96%, 100% { transform: scaleX(0); opacity: 0; }
     }
 
-    /* 译文 tip：像扩展里那样贴着原文 */
     .demo-tip {
       position: relative; width: max-content; max-width: 92%;
       margin: 10px 0 6px 18px;
@@ -172,7 +151,6 @@
       92%, 100% { opacity: 0; transform: translateY(4px) scale(.97); }
     }
 
-    /* 角落里的蛋（即将孵化）+ 胶带 */
     .demo-egg {
       position: absolute; right: 18px; bottom: 14px; width: 74px; height: 74px;
       transform-origin: 50% 96%;
@@ -196,7 +174,6 @@
       transform: rotate(3deg);
       font-family: ui-monospace, "Cascadia Mono", monospace;
     }
-    /* 和纸胶带：只在演示窗左上角出现一次 */
     .tape {
       position: absolute; width: 92px; height: 26px;
       background: rgba(201, 138, 75, .32);
@@ -205,9 +182,9 @@
       top: -12px; left: 34px; transform: rotate(-4deg);
     }
 
-    /* ============ 爪印小径 ============ */
+    /* ============ paw trail ============ */
     .path-head { text-align: center; padding: 26px 0 8px; }
-    .path-head h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 900; letter-spacing: 1px; }
+    .path-head h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 900; letter-spacing: .5px; }
     .path-head p { color: var(--ink-2); font-size: 15px; margin-top: 6px; }
 
     .features { position: relative; padding: 30px 0 26px; }
@@ -227,13 +204,10 @@
     .feature.in { opacity: 1; transform: translateY(0); }
     .feature:nth-child(odd) { margin-left: auto; }
     .feature:nth-child(even) { margin-right: auto; }
-    /* 小径上的爪印 */
-    .feature .paw {
-      position: absolute; top: 26px; width: 30px; height: 30px;
-    }
+    .feature .paw { position: absolute; top: 26px; width: 30px; height: 30px; }
     .feature:nth-child(odd) .paw { left: -68px; transform: rotate(-14deg); }
     .feature:nth-child(even) .paw { right: -68px; transform: rotate(166deg) scaleX(-1); }
-    .feature h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: baseline; gap: 10px; }
+    .feature h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
     .feature h3 .tag {
       font-family: ui-monospace, "Cascadia Mono", monospace;
       font-size: 11px; color: var(--matcha-deep); letter-spacing: 1px; font-weight: 500;
@@ -246,7 +220,7 @@
       background: var(--paper); white-space: nowrap;
     }
 
-    /* ============ 信任区（保持安静） ============ */
+    /* ============ trust ============ */
     .trust {
       border-top: 2px dashed var(--line);
       padding: 34px 0 60px;
@@ -254,7 +228,7 @@
     }
     .trust .shield { padding-top: 4px; }
     .trust h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
-    .trust p { font-size: 14.5px; color: var(--ink-2); max-width: 44em; }
+    .trust p { font-size: 14.5px; color: var(--ink-2); max-width: 46em; }
 
     footer {
       border-top: 2px dashed var(--line);
@@ -269,7 +243,6 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; padding-top: 26px; }
       .demo-window { transform: none; order: -1; }
-      .vertical-cue { display: none; }
       .features::before { left: 16px; }
       .feature { width: auto; margin-left: 44px !important; margin-right: 0 !important; }
       .feature .paw { left: -44px !important; right: auto !important; }
@@ -298,37 +271,36 @@
           <ellipse cx="74" cy="68" rx="2.2" ry="3.6" fill="#55744A"/>
           <path d="M57.5 77.5 Q60 80.5 62.5 77.5" stroke="#8A7460" stroke-width="2" fill="none" stroke-linecap="round"/>
         </svg>
-        页猫 <small>PageCat</small>
+        PageCat <small>页猫</small>
       </div>
       <div class="links">
-        <a href="#features">功能</a>
-        <a href="privacy.html">隐私</a>
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
         <a href="https://github.com/BuildInGitHub">GitHub</a>
-        <a class="lang" href="en/">EN</a>
+        <a class="lang" href="../">中文</a>
       </div>
     </nav>
 
     <section class="hero">
       <div>
-        <span class="eyebrow">浏览器扩展 · CHROME &amp; EDGE</span>
-        <h1>你的浏览器，<br>缺<span class="squig">一只猫
+        <span class="eyebrow">BROWSER EXTENSION · CHROME &amp; EDGE</span>
+        <h1>Your browser is<br>missing<span class="squig">&nbsp;a cat
           <svg viewBox="0 0 200 9" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 Q 30 1, 60 5 T 110 4 T 160 6 T 198 3" fill="none" stroke="#C98A4B" stroke-width="3" stroke-linecap="round"/></svg>
-        </span>。</h1>
-        <p class="sub">页猫把三件小事打包：选中即译、长文摘要、到点提醒。它蹲在角落，不吵你，<b>也不出你的电脑</b>。</p>
+        </span>.</h1>
+        <p class="sub">PageCat does three small things: translate on select, summarize long pages, and nudge you to rest. It sits in the corner, stays quiet — <b>and never leaves your computer</b>.</p>
         <div class="cta">
-          <!-- TODO: 上架通过后替换为真实商店链接 -->
+          <!-- TODO: replace with real store links once approved -->
           <a class="btn btn-primary wobble" href="#" id="btn-chrome">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
-            Chrome 商店 · 审核中
+            Chrome Web Store · in review
           </a>
           <a class="btn btn-ghost wobble" href="https://github.com/BuildInGitHub">
-            先去 GitHub 逛逛
+            Browse GitHub
           </a>
         </div>
-        <p class="note">审核通过即上线 · v0.3.3 · 免费</p>
+        <p class="note">live once review passes · v0.3.3 · free</p>
       </div>
 
-      <!-- 签名元素：会动的浏览器演示窗 -->
       <div class="demo-window wobble">
         <div class="tape" aria-hidden="true"></div>
         <div class="demo-bar">
@@ -338,14 +310,13 @@
         <div class="demo-body">
           <div class="fake-line w85" aria-hidden="true"></div>
           <div class="fake-line w60" aria-hidden="true"></div>
-          <p class="demo-sentence">The <span class="phrase">quick brown fox</span> jumps over the lazy dog.</p>
-          <div class="demo-tip" role="img" aria-label="划词翻译演示：敏捷的棕色狐狸">
-            <b>敏捷的棕色狐狸</b>
+          <p class="demo-sentence"><span class="phrase">敏捷的棕色狐狸</span>跳过了懒狗。</p>
+          <div class="demo-tip" role="img" aria-label="Translation demo: quick brown fox">
+            <b>quick brown fox</b>
           </div>
           <div class="fake-line w60" aria-hidden="true"></div>
           <div class="fake-line w40" aria-hidden="true"></div>
 
-          <!-- 角落里即将孵化的蛋 -->
           <svg class="demo-egg" viewBox="0 0 120 120" aria-hidden="true">
             <path class="peek-tail" d="M86 82 Q106 76 100 54" fill="none" stroke="#3B2B20" stroke-width="6" stroke-linecap="round"/>
             <path d="M60 26 C 82 26 96 56 96 76 A 36 36 0 1 1 24 76 C 24 56 38 26 60 26 Z" fill="#FFFDF8" stroke="#3B2B20" stroke-width="2.5"/>
@@ -357,42 +328,37 @@
             <g class="peek-eye"><ellipse cx="60" cy="66" rx="3" ry="3.8" fill="#FFFDF8"/><ellipse cx="60" cy="66" rx="1.5" ry="2.6" fill="#55744A"/></g>
             <g class="peek-eye"><ellipse cx="72" cy="65" rx="3" ry="3.8" fill="#FFFDF8"/><ellipse cx="72" cy="65" rx="1.5" ry="2.6" fill="#55744A"/></g>
           </svg>
-          <span class="egg-tag">即将孵化</span>
+          <span class="egg-tag">hatching soon</span>
         </div>
       </div>
-
-      <span class="vertical-cue" aria-hidden="true">
-        跟着爪印走
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
-      </span>
     </section>
 
     <section id="features">
       <div class="path-head">
-        <h2>它每天干的事</h2>
-        <p>不多，就三样 —— 但都干了很久</p>
+        <h2>Three small things, done well</h2>
+        <p>Follow the paw prints</p>
       </div>
       <div class="features">
         <article class="feature wobble">
           <svg class="paw" viewBox="0 0 24 24" fill="#C98A4B" aria-hidden="true">
             <ellipse cx="12" cy="16" rx="4.6" ry="3.8"/><circle cx="6" cy="10.5" r="2"/><circle cx="10.3" cy="7.6" r="2"/><circle cx="14.8" cy="7.6" r="2"/><circle cx="18.6" cy="10.5" r="2"/>
           </svg>
-          <h3>选中即译 <span class="tag">TRANSLATE</span></h3>
-          <p>鼠标划过外文，译文贴着原文冒出来。不用点按钮，也不用开新标签页。译文不满意？一键复制走。</p>
+          <h3>Translate on select <span class="tag">TRANSLATE</span></h3>
+          <p>Highlight foreign text and the translation appears right beside it. No buttons, no new tabs. Need it elsewhere? One click to copy.</p>
         </article>
         <article class="feature wobble">
           <svg class="paw" viewBox="0 0 24 24" fill="#6F8F5E" aria-hidden="true">
             <ellipse cx="12" cy="16" rx="4.6" ry="3.8"/><circle cx="6" cy="10.5" r="2"/><circle cx="10.3" cy="7.6" r="2"/><circle cx="14.8" cy="7.6" r="2"/><circle cx="18.6" cy="10.5" r="2"/>
           </svg>
-          <h3>长文变短 <span class="tag">SUMMARY</span></h3>
-          <p>按 <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">Y</span>，一整页变三句话和几组关键词。接你自己填的 AI 接口，DeepSeek、GLM 都行。</p>
+          <h3>Long pages, short <span class="tag">SUMMARY</span></h3>
+          <p>Press <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">Y</span> and a full page becomes three sentences and a few keywords. Bring your own AI endpoint — DeepSeek, GLM, any OpenAI-compatible API.</p>
         </article>
         <article class="feature wobble">
           <svg class="paw" viewBox="0 0 24 24" fill="#E8918C" aria-hidden="true">
             <ellipse cx="12" cy="16" rx="4.6" ry="3.8"/><circle cx="6" cy="10.5" r="2"/><circle cx="10.3" cy="7.6" r="2"/><circle cx="14.8" cy="7.6" r="2"/><circle cx="18.6" cy="10.5" r="2"/>
           </svg>
-          <h3>蹲角落提醒你 <span class="tag">COMPANION</span></h3>
-          <p>小猫拖到屏幕九宫格任意角落安家，到点冒个泡：喝水、闭眼、起来走走。嫌它吵？气泡文案自己改。</p>
+          <h3>A companion in the corner <span class="tag">COMPANION</span></h3>
+          <p>Drag the cat to any corner of a 3×3 grid around your screen. It bubbles up on schedule: drink water, rest your eyes, stretch. Too chatty? Edit its lines yourself.</p>
         </article>
       </div>
     </section>
@@ -402,19 +368,18 @@
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#6F8F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
       </div>
       <div>
-        <h3>它没有服务器</h3>
-        <p>设置和 API Key 只存在你浏览器里；划词和摘要内容只在你使用时，直连你自己填的接口。不收集、不上传、不卖数据。详见 <a href="privacy.html">隐私政策</a>。</p>
+        <h3>It has no server</h3>
+        <p>Settings and your API key live only in your browser; selected text and page content go straight to the endpoint you configured, only when you use a feature. Nothing collected, uploaded, or sold. See the <a href="privacy.html">privacy policy</a>.</p>
       </div>
     </section>
 
     <footer>
-      <span>© 2026 页猫 PageCat</span>
-      <span><a href="privacy.html">隐私</a> · <a href="https://github.com/BuildInGitHub">GitHub</a> · <a href="en/">English</a></span>
+      <span>© 2026 PageCat 页猫</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="https://github.com/BuildInGitHub">GitHub</a> · <a href="../">中文</a></span>
     </footer>
   </div>
 
   <script>
-    // 爪印小径：滚动到哪，猫走到哪
     const io = new IntersectionObserver(
       (es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
       { threshold: 0.2 }
