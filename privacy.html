@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 — 页猫 PageCat</title>
+  <style>
+    :root {
+      --milk: #fdf9f4;
+      --foam: #ffffff;
+      --cocoa: #432e24;
+      --cocoa-2: #8c7566;
+      --caramel-deep: #a85b1f;
+      --line: #efe0d0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--milk);
+      color: var(--cocoa);
+      font-family: -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+    a { color: var(--caramel-deep); }
+    .back { font-size: 14px; text-decoration: none; display: inline-block; margin-bottom: 26px; color: var(--cocoa-2); }
+    .back:hover { color: var(--caramel-deep); }
+    h1 { font-size: 30px; margin-bottom: 6px; letter-spacing: -0.5px; }
+    .updated { color: var(--cocoa-2); font-size: 13.5px; margin-bottom: 34px; }
+    h2 { font-size: 19px; margin: 34px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p { margin-bottom: 12px; }
+    ul { margin: 0 0 12px 22px; }
+    li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+    th, td { text-align: left; padding: 9px 12px; border: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--foam); }
+    code { background: var(--foam); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
+    .en { margin-top: 50px; padding: 24px 26px; background: var(--foam); border: 1px solid var(--line); border-radius: 16px; font-size: 14px; color: var(--cocoa-2); }
+    .en h2 { border-top: none; padding-top: 0; margin-top: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回页猫首页</a>
+
+    <h1>隐私政策</h1>
+    <p class="updated">最后更新：2026 年 9 月 17 日 · 适用于「页猫 PageCat」浏览器扩展</p>
+
+    <p>我们高度重视你的隐私。本政策说明页猫收集什么、不收集什么，以及数据如何流动。<strong>核心结论：页猫没有自己的服务器，不收集、不存储、不出售任何用户数据。</strong></p>
+
+    <h2>1. 页猫收集哪些数据</h2>
+    <p>不收集。页猫不含账号系统、不含统计埋点、不含广告 SDK，因此不存在由我们运营的数据收集。</p>
+
+    <h2>2. 数据如何流动</h2>
+    <p>以下数据仅在<strong>你主动触发对应功能时</strong>产生，并直连发送至你配置的服务，页猫不经手、不留存：</p>
+    <ul>
+      <li><strong>划词翻译</strong>：你选中的文本会发送到翻译接口（默认为公共翻译服务 Google Translate / MyMemory，可在设置中更换）。</li>
+      <li><strong>网页摘要 / AI 对话</strong>：当前页面的正文文本会发送到<strong>你自己填写的 AI 接口</strong>（如 DeepSeek、智谱 GLM 等 OpenAI 兼容服务）。使用哪家、发给谁，完全由你的配置决定。</li>
+    </ul>
+    <p>这些请求从你的浏览器直接发往对应服务商，受该服务商自己的隐私政策约束。</p>
+
+    <h2>3. 本地存储</h2>
+    <p>以下信息保存在浏览器本地 <code>chrome.storage.local</code> 中，仅用于功能运行，不会上传：</p>
+    <ul>
+      <li>功能开关与偏好（目标语言、触发方式、桌宠尺寸等）</li>
+      <li>你填写的 AI 接口地址与 API Key（仅存本地，请勿在公用电脑上填写）</li>
+      <li>桌宠停靠位置等界面状态</li>
+    </ul>
+    <p>卸载扩展即删除全部本地数据。</p>
+
+    <h2>4. 浏览器权限用途</h2>
+    <table>
+      <tr><th>权限</th><th>用途</th></tr>
+      <tr><td>storage</td><td>在本地保存你的设置</td></tr>
+      <tr><td>activeTab / scripting</td><td>在你划词或点击摘要时，读取当前标签页内容以完成翻译/摘要</td></tr>
+      <tr><td>contextMenus</td><td>提供右键菜单快捷入口</td></tr>
+      <tr><td>sidePanel</td><td>在浏览器侧边栏展示网页摘要</td></tr>
+      <tr><td>网络访问（http/https）</td><td>连接你配置的 AI 接口与翻译接口；AI 地址由用户自定义，因此不能预限定域名</td></tr>
+    </table>
+
+    <h2>5. 第三方服务</h2>
+    <p>翻译与 AI 能力由第三方服务商提供（Google、MyMemory、DeepSeek、智谱等，以你实际配置为准）。这些服务商可能按其自身政策处理请求内容，请参阅对应服务商的隐私政策。</p>
+
+    <h2>6. 数据出售与广告</h2>
+    <p>页猫不出售任何数据，不投放广告，不进行用户行为追踪。</p>
+
+    <h2>7. 儿童隐私</h2>
+    <p>页猫不面向 13 岁以下儿童，也不 knowingly 收集任何儿童的个人信息。</p>
+
+    <h2>8. 政策变更</h2>
+    <p>如本政策有实质变更，我们会更新页面顶部的日期，并在扩展更新说明中提示。</p>
+
+    <h2>9. 联系我们</h2>
+    <p>通过 GitHub 仓库 <a href="https://github.com/BuildInGitHub">BuildInGitHub</a> 的 Issues 联系。</p>
+
+    <div class="en">
+      <h2>Privacy Summary (English)</h2>
+      <p>PageCat is a browser extension with no servers of its own. It collects, stores, and sells no user data — no accounts, no analytics, no ads. When you trigger a feature, selected text or page content is sent directly from your browser to the translation service (default: Google Translate / MyMemory) or to the AI endpoint <em>you configure</em> (e.g. DeepSeek, Zhipu GLM). Your settings and API key are stored only in local browser storage (<code>chrome.storage.local</code>) and are removed when you uninstall the extension. Browser permissions are used solely for the features described above. Contact: GitHub Issues.</p>
+    </div>
+  </div>
+</body>
+</html>
