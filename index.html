@@ -99,15 +99,6 @@
       font-family: ui-monospace, "Cascadia Mono", monospace;
     }
 
-    /* 竖排导引：跟着爪印走 */
-    .vertical-cue {
-      position: absolute; right: -6px; top: 120px;
-      writing-mode: vertical-rl; letter-spacing: 10px;
-      font-size: 13px; color: var(--ink-2);
-      display: flex; align-items: center; gap: 8px;
-    }
-    .vertical-cue svg { transform: rotate(90deg); }
-
     /* ============ 演示窗（签名元素） ============ */
     .demo-window {
       background: var(--card);
@@ -269,7 +260,6 @@
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; padding-top: 26px; }
       .demo-window { transform: none; order: -1; }
-      .vertical-cue { display: none; }
       .features::before { left: 16px; }
       .feature { width: auto; margin-left: 44px !important; margin-right: 0 !important; }
       .feature .paw { left: -44px !important; right: auto !important; }
@@ -360,17 +350,12 @@
           <span class="egg-tag">即将孵化</span>
         </div>
       </div>
-
-      <span class="vertical-cue" aria-hidden="true">
-        跟着爪印走
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
-      </span>
     </section>
 
     <section id="features">
       <div class="path-head">
         <h2>它每天干的事</h2>
-        <p>不多，就三样 —— 但都干了很久</p>
+        <p>跟着爪印走 —— 不多，就三样，但都干了很久</p>
       </div>
       <div class="features">
         <article class="feature wobble">
