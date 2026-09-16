@@ -6,48 +6,63 @@
   <title>隐私政策 — 页猫 PageCat</title>
   <style>
     :root {
-      --milk: #fdf9f4;
-      --foam: #ffffff;
-      --cocoa: #432e24;
-      --cocoa-2: #8c7566;
-      --caramel-deep: #a85b1f;
-      --line: #efe0d0;
+      --paper: #FAF5EB;
+      --card: #FFFDF8;
+      --ink: #3B2B20;
+      --ink-2: #8A7460;
+      --matcha: #6F8F5E;
+      --matcha-deep: #55744A;
+      --line: #E5D5BC;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--milk);
-      color: var(--cocoa);
-      font-family: -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
-      line-height: 1.75;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "PingFang SC", "MiSans", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.8;
       font-size: 15px;
+      background-image: radial-gradient(rgba(59, 43, 32, .028) 1px, transparent 1px);
+      background-size: 22px 22px;
     }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
-    a { color: var(--caramel-deep); }
-    .back { font-size: 14px; text-decoration: none; display: inline-block; margin-bottom: 26px; color: var(--cocoa-2); }
-    .back:hover { color: var(--caramel-deep); }
-    h1 { font-size: 30px; margin-bottom: 6px; letter-spacing: -0.5px; }
-    .updated { color: var(--cocoa-2); font-size: 13.5px; margin-bottom: 34px; }
-    h2 { font-size: 19px; margin: 34px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    a { color: var(--matcha-deep); }
+    .back {
+      font-family: ui-monospace, "Cascadia Mono", monospace;
+      font-size: 13px; text-decoration: none; display: inline-block; margin-bottom: 28px;
+      color: var(--ink-2);
+    }
+    .back:hover { color: var(--matcha-deep); }
+    .eyebrow {
+      font-family: ui-monospace, "Cascadia Mono", monospace;
+      font-size: 12px; letter-spacing: 3px; color: var(--matcha-deep);
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--matcha); }
+    h1 { font-size: 30px; font-weight: 900; margin-bottom: 6px; letter-spacing: .5px; }
+    .updated { color: var(--ink-2); font-size: 13px; margin-bottom: 34px; font-family: ui-monospace, "Cascadia Mono", monospace; }
+    h2 { font-size: 18px; font-weight: 800; margin: 32px 0 10px; padding-top: 20px; border-top: 2px dashed var(--line); }
     h2:first-of-type { border-top: none; padding-top: 0; }
     p { margin-bottom: 12px; }
     ul { margin: 0 0 12px 22px; }
     li { margin-bottom: 6px; }
     table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
-    th, td { text-align: left; padding: 9px 12px; border: 1px solid var(--line); vertical-align: top; }
-    th { background: var(--foam); }
-    code { background: var(--foam); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
-    .en { margin-top: 50px; padding: 24px 26px; background: var(--foam); border: 1px solid var(--line); border-radius: 16px; font-size: 14px; color: var(--cocoa-2); }
+    th, td { text-align: left; padding: 9px 12px; border: 1.5px solid var(--line); vertical-align: top; }
+    th { background: var(--card); font-family: ui-monospace, "Cascadia Mono", monospace; font-size: 12.5px; }
+    code { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; font-size: 13px; }
+    .en { margin-top: 50px; padding: 24px 26px; background: var(--card); border: 1.5px solid var(--ink); border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px; font-size: 14px; color: var(--ink-2); }
     .en h2 { border-top: none; padding-top: 0; margin-top: 0; }
+    a:focus-visible { outline: 3px solid #C98A4B; outline-offset: 3px; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <a class="back" href="index.html">← 返回页猫首页</a>
+    <a class="back" href="index.html">← 回到页猫</a>
 
+    <span class="eyebrow">PRIVACY</span>
     <h1>隐私政策</h1>
-    <p class="updated">最后更新：2026 年 9 月 17 日 · 适用于「页猫 PageCat」浏览器扩展</p>
+    <p class="updated">最后更新：2026-09-17 · 适用于「页猫 PageCat」浏览器扩展</p>
 
-    <p>我们高度重视你的隐私。本政策说明页猫收集什么、不收集什么，以及数据如何流动。<strong>核心结论：页猫没有自己的服务器，不收集、不存储、不出售任何用户数据。</strong></p>
+    <p>我们重视你的隐私。本政策说明页猫收集什么、不收集什么，以及数据如何流动。<strong>核心结论：页猫没有自己的服务器，不收集、不存储、不出售任何用户数据。</strong></p>
 
     <h2>1. 页猫收集哪些数据</h2>
     <p>不收集。页猫不含账号系统、不含统计埋点、不含广告 SDK，因此不存在由我们运营的数据收集。</p>
