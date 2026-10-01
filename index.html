@@ -164,30 +164,17 @@
       92%, 100% { opacity: 0; transform: translateY(4px) scale(.97); }
     }
 
-    /* 角落里的蛋（即将孵化）+ 胶带 */
-    .demo-egg {
-      position: absolute; right: 18px; bottom: 14px; width: 74px; height: 74px;
+    /* 角落里破壳而出的小猫 */
+    .demo-cat {
+      position: absolute; right: 18px; bottom: 14px; width: 78px; height: 78px;
       transform-origin: 50% 96%;
-      animation: egg-rock 7s ease-in-out infinite;
+      animation: cat-bob 3.2s ease-in-out infinite;
     }
-    @keyframes egg-rock {
-      0%, 55%, 100% { transform: rotate(0deg); }
-      62% { transform: rotate(-4deg); }
-      68% { transform: rotate(3deg); }
-      74% { transform: rotate(-2deg); }
-      80% { transform: rotate(0deg); }
-    }
-    .demo-egg .peek-tail { transform-origin: 20% 100%; animation: peek-wag 1.9s ease-in-out infinite alternate; }
+    @keyframes cat-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .demo-cat .peek-tail { transform-origin: 20% 100%; animation: peek-wag 1.9s ease-in-out infinite alternate; }
     @keyframes peek-wag { from { transform: rotate(-6deg); } to { transform: rotate(9deg); } }
-    .demo-egg .peek-eye { transform-box: fill-box; transform-origin: center; animation: peek-blink 4.4s infinite; }
+    .demo-cat .peek-eye { transform-box: fill-box; transform-origin: center; animation: peek-blink 4.4s infinite; }
     @keyframes peek-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
-    .egg-tag {
-      position: absolute; right: 8px; bottom: 84px;
-      background: var(--sel); border: 1.5px solid var(--ink);
-      font-size: 11px; font-weight: 700; padding: 3px 9px;
-      transform: rotate(3deg);
-      font-family: ui-monospace, "Cascadia Mono", monospace;
-    }
     /* 和纸胶带：只在演示窗左上角出现一次 */
     .tape {
       position: absolute; width: 92px; height: 26px;
@@ -267,7 +254,7 @@
       .trust { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .demo-sentence .phrase::after, .demo-tip, .demo-egg, .demo-egg .peek-tail, .demo-egg .peek-eye { animation: none; }
+      .demo-sentence .phrase::after, .demo-tip, .demo-cat, .demo-cat .peek-tail, .demo-cat .peek-eye { animation: none; }
       .demo-tip { opacity: 1; transform: none; }
       .demo-sentence .phrase::after { transform: scaleX(1); }
       .feature { opacity: 1; transform: none; transition: none; }
@@ -305,13 +292,12 @@
         </span>。</h1>
         <p class="sub">页猫把三件小事打包：选中即译、长文摘要、到点提醒。它蹲在角落，不吵你，<b>也不出你的电脑</b>。</p>
         <div class="cta">
-          <!-- TODO: 上架通过后替换为真实商店链接 -->
-          <a class="btn btn-primary wobble" href="#" id="btn-chrome">
+          <a class="btn btn-primary wobble" href="https://chromewebstore.google.com/detail/%E9%A1%B5%E7%8C%AB/iioficnecohfopdeknbjcnicpiaoiijh" id="btn-chrome" target="_blank" rel="noopener">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
-            Chrome 商店 · 审核中
+            安装到 Chrome
           </a>
         </div>
-        <p class="note">审核通过即上线 · v0.3.3 · 免费</p>
+        <p class="note">已上架 Chrome 应用商店 · v0.4.0 · 免费</p>
       </div>
 
       <!-- 签名元素：会动的浏览器演示窗 -->
@@ -331,19 +317,19 @@
           <div class="fake-line w60" aria-hidden="true"></div>
           <div class="fake-line w40" aria-hidden="true"></div>
 
-          <!-- 角落里即将孵化的蛋 -->
-          <svg class="demo-egg" viewBox="0 0 120 120" aria-hidden="true">
-            <path class="peek-tail" d="M86 82 Q106 76 100 54" fill="none" stroke="#3B2B20" stroke-width="6" stroke-linecap="round"/>
-            <path d="M60 26 C 82 26 96 56 96 76 A 36 36 0 1 1 24 76 C 24 56 38 26 60 26 Z" fill="#FFFDF8" stroke="#3B2B20" stroke-width="2.5"/>
-            <ellipse cx="46" cy="50" rx="3" ry="2" fill="#E5D5BC"/>
-            <ellipse cx="71" cy="45" rx="2.4" ry="1.8" fill="#E5D5BC"/>
-            <ellipse cx="79" cy="65" rx="2.8" ry="2" fill="#E5D5BC"/>
-            <path d="M34 60 L43 56 L39 65 L50 58 L46 69 L57 61" fill="none" stroke="#3B2B20" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
-            <path d="M49 57 L52 43 L58 55 Z" fill="#3B2B20"/>
-            <g class="peek-eye"><ellipse cx="60" cy="66" rx="3" ry="3.8" fill="#FFFDF8"/><ellipse cx="60" cy="66" rx="1.5" ry="2.6" fill="#55744A"/></g>
-            <g class="peek-eye"><ellipse cx="72" cy="65" rx="3" ry="3.8" fill="#FFFDF8"/><ellipse cx="72" cy="65" rx="1.5" ry="2.6" fill="#55744A"/></g>
+          <!-- 角落里破壳而出的小猫 -->
+          <svg class="demo-cat" viewBox="0 0 120 120" aria-hidden="true">
+            <path class="peek-tail" d="M88 88 Q110 82 104 58" fill="none" stroke="#3B2B20" stroke-width="7" stroke-linecap="round"/>
+            <ellipse cx="60" cy="88" rx="27" ry="21" fill="#3B2B20"/>
+            <path d="M36 52 Q38 30 52 40 Z" fill="#3B2B20"/>
+            <path d="M84 52 Q82 30 68 40 Z" fill="#3B2B20"/>
+            <ellipse cx="60" cy="62" rx="30" ry="26" fill="#3B2B20"/>
+            <g class="peek-eye"><ellipse cx="49" cy="60" rx="4.2" ry="5.4" fill="#FAF5EB"/><ellipse cx="49" cy="60" rx="2.1" ry="3.4" fill="#55744A"/></g>
+            <g class="peek-eye"><ellipse cx="71" cy="60" rx="4.2" ry="5.4" fill="#FAF5EB"/><ellipse cx="71" cy="60" rx="2.1" ry="3.4" fill="#55744A"/></g>
+            <path d="M56.5 70 Q60 74 63.5 70" stroke="#8A7460" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="40" cy="70" rx="4" ry="2.4" fill="#E8918C" opacity=".45"/>
+            <ellipse cx="80" cy="70" rx="4" ry="2.4" fill="#E8918C" opacity=".45"/>
           </svg>
-          <span class="egg-tag">即将孵化</span>
         </div>
       </div>
     </section>
