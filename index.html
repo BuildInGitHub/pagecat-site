@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <title>页猫 PageCat — 你的浏览器，缺一只猫</title>
   <meta name="description" content="页猫：划词即译、长文摘要、蹲在角落提醒你休息的浏览器小猫。没有服务器，Key 自己填，数据不出你的电脑。">
   <link rel="alternate" hreflang="zh" href="https://buildingithub.github.io/pagecat-site/">
@@ -266,15 +269,23 @@
   <div class="wrap">
     <nav>
       <div class="brand">
-        <svg width="30" height="30" viewBox="0 0 120 120" aria-hidden="true">
-          <path d="M28 34 Q30 12 44 22 Z" fill="#3B2B20"/>
-          <path d="M92 34 Q90 12 76 22 Z" fill="#3B2B20"/>
-          <ellipse cx="60" cy="72" rx="40" ry="36" fill="#3B2B20"/>
-          <ellipse cx="46" cy="68" rx="4.6" ry="6" fill="#FAF5EB"/>
-          <ellipse cx="74" cy="68" rx="4.6" ry="6" fill="#FAF5EB"/>
-          <ellipse cx="46" cy="68" rx="2.2" ry="3.6" fill="#55744A"/>
-          <ellipse cx="74" cy="68" rx="2.2" ry="3.6" fill="#55744A"/>
-          <path d="M57.5 77.5 Q60 80.5 62.5 77.5" stroke="#8A7460" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12.5 30 Q9.5 10 26.5 17.5 Z" fill="#F0A05A"/>
+          <path d="M51.5 30 Q54.5 10 37.5 17.5 Z" fill="#F0A05A"/>
+          <path d="M15.5 26.5 Q14.5 15.5 24 19.5 Z" fill="#F9CFC0"/>
+          <path d="M48.5 26.5 Q49.5 15.5 40 19.5 Z" fill="#F9CFC0"/>
+          <ellipse cx="32" cy="38" rx="23" ry="20.5" fill="#F5AC63"/>
+          <rect x="25.8" y="19.5" width="3.2" height="7.5" rx="1.6" fill="#DE8B3A" transform="rotate(-7 27.4 23.2)"/>
+          <rect x="30.4" y="18.4" width="3.2" height="8.5" rx="1.6" fill="#DE8B3A"/>
+          <rect x="35" y="19.5" width="3.2" height="7.5" rx="1.6" fill="#DE8B3A" transform="rotate(7 36.6 23.2)"/>
+          <ellipse cx="32" cy="45" rx="13.5" ry="9.5" fill="#FFF6EC"/>
+          <circle cx="24" cy="37.5" r="4.4" fill="#432E24"/>
+          <circle cx="40" cy="37.5" r="4.4" fill="#432E24"/>
+          <circle cx="25.7" cy="35.8" r="1.5" fill="#fff"/>
+          <circle cx="41.7" cy="35.8" r="1.5" fill="#fff"/>
+          <path d="M29.8 43.4 Q32 45.8 34.2 43.4" stroke="#432E24" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <ellipse cx="16.8" cy="43.5" rx="4.2" ry="2.6" fill="#F9C4C4" opacity=".9"/>
+          <ellipse cx="47.2" cy="43.5" rx="4.2" ry="2.6" fill="#F9C4C4" opacity=".9"/>
         </svg>
         页猫 <small>PageCat</small>
       </div>
@@ -319,16 +330,22 @@
 
           <!-- 角落里破壳而出的小猫 -->
           <svg class="demo-cat" viewBox="0 0 120 120" aria-hidden="true">
-            <path class="peek-tail" d="M88 88 Q110 82 104 58" fill="none" stroke="#3B2B20" stroke-width="7" stroke-linecap="round"/>
-            <ellipse cx="60" cy="88" rx="27" ry="21" fill="#3B2B20"/>
-            <path d="M36 52 Q38 30 52 40 Z" fill="#3B2B20"/>
-            <path d="M84 52 Q82 30 68 40 Z" fill="#3B2B20"/>
-            <ellipse cx="60" cy="62" rx="30" ry="26" fill="#3B2B20"/>
-            <g class="peek-eye"><ellipse cx="49" cy="60" rx="4.2" ry="5.4" fill="#FAF5EB"/><ellipse cx="49" cy="60" rx="2.1" ry="3.4" fill="#55744A"/></g>
-            <g class="peek-eye"><ellipse cx="71" cy="60" rx="4.2" ry="5.4" fill="#FAF5EB"/><ellipse cx="71" cy="60" rx="2.1" ry="3.4" fill="#55744A"/></g>
-            <path d="M56.5 70 Q60 74 63.5 70" stroke="#8A7460" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <ellipse cx="40" cy="70" rx="4" ry="2.4" fill="#E8918C" opacity=".45"/>
-            <ellipse cx="80" cy="70" rx="4" ry="2.4" fill="#E8918C" opacity=".45"/>
+            <path class="peek-tail" d="M88 88 Q110 82 104 58" fill="none" stroke="#DE8B3A" stroke-width="7" stroke-linecap="round"/>
+            <ellipse cx="60" cy="88" rx="27" ry="21" fill="#F5AC63"/>
+            <path d="M36 52 Q38 30 52 40 Z" fill="#F0A05A"/>
+            <path d="M84 52 Q82 30 68 40 Z" fill="#F0A05A"/>
+            <path d="M40 47 Q41 38 48 42 Z" fill="#F9CFC0"/>
+            <path d="M80 47 Q79 38 72 42 Z" fill="#F9CFC0"/>
+            <ellipse cx="60" cy="62" rx="30" ry="26" fill="#F5AC63"/>
+            <rect x="51" y="42" width="4" height="9" rx="2" fill="#DE8B3A"/>
+            <rect x="57" y="41" width="4" height="10" rx="2" fill="#DE8B3A"/>
+            <rect x="63" y="42" width="4" height="9" rx="2" fill="#DE8B3A"/>
+            <ellipse cx="60" cy="73" rx="16" ry="10.5" fill="#FFF6EC"/>
+            <g class="peek-eye"><circle cx="49" cy="62" r="5.2" fill="#432E24"/><circle cx="51" cy="60" r="1.7" fill="#fff"/></g>
+            <g class="peek-eye"><circle cx="71" cy="62" r="5.2" fill="#432E24"/><circle cx="73" cy="60" r="1.7" fill="#fff"/></g>
+            <path d="M56.5 72.5 Q60 75.5 63.5 72.5" stroke="#432E24" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <ellipse cx="41" cy="70" rx="4.6" ry="2.8" fill="#F9C4C4" opacity=".9"/>
+            <ellipse cx="79" cy="70" rx="4.6" ry="2.8" fill="#F9C4C4" opacity=".9"/>
           </svg>
         </div>
       </div>
