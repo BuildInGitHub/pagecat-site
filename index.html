@@ -169,7 +169,7 @@
 
     /* 角落里破壳而出的小猫 */
     .demo-cat {
-      position: absolute; right: 18px; bottom: 14px; width: 78px; height: 78px;
+      position: absolute; right: 12px; bottom: -3px; width: 108px; height: auto;
       transform-origin: 50% 96%;
       animation: cat-bob 3.2s ease-in-out infinite;
     }
@@ -329,24 +329,29 @@
           <div class="fake-line w40" aria-hidden="true"></div>
 
           <!-- 角落里破壳而出的小猫 -->
-          <svg class="demo-cat" viewBox="0 0 120 120" aria-hidden="true">
-            <path class="peek-tail" d="M88 88 Q110 82 104 58" fill="none" stroke="#DE8B3A" stroke-width="7" stroke-linecap="round"/>
-            <ellipse cx="60" cy="88" rx="27" ry="21" fill="#F5AC63"/>
-            <path d="M36 52 Q38 30 52 40 Z" fill="#F0A05A"/>
-            <path d="M84 52 Q82 30 68 40 Z" fill="#F0A05A"/>
-            <path d="M40 47 Q41 38 48 42 Z" fill="#F9CFC0"/>
-            <path d="M80 47 Q79 38 72 42 Z" fill="#F9CFC0"/>
-            <ellipse cx="60" cy="62" rx="30" ry="26" fill="#F5AC63"/>
-            <rect x="51" y="42" width="4" height="9" rx="2" fill="#DE8B3A"/>
-            <rect x="57" y="41" width="4" height="10" rx="2" fill="#DE8B3A"/>
-            <rect x="63" y="42" width="4" height="9" rx="2" fill="#DE8B3A"/>
-            <ellipse cx="60" cy="73" rx="16" ry="10.5" fill="#FFF6EC"/>
-            <g class="peek-eye"><circle cx="49" cy="62" r="5.2" fill="#432E24"/><circle cx="51" cy="60" r="1.7" fill="#fff"/></g>
-            <g class="peek-eye"><circle cx="71" cy="62" r="5.2" fill="#432E24"/><circle cx="73" cy="60" r="1.7" fill="#fff"/></g>
-            <path d="M56.5 72.5 Q60 75.5 63.5 72.5" stroke="#432E24" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <ellipse cx="41" cy="70" rx="4.6" ry="2.8" fill="#F9C4C4" opacity=".9"/>
-            <ellipse cx="79" cy="70" rx="4.6" ry="2.8" fill="#F9C4C4" opacity=".9"/>
-          </svg>
+          <!-- 趴在窗口边缘探头的小猫 -->
+          <svg class="demo-cat" viewBox="0 0 150 118" aria-hidden="true">
+            <path class="peek-tail" d="M126 104 Q146 98 142 72" fill="none" stroke="#DE8B3A" stroke-width="9" stroke-linecap="round"/>
+            <rect x="42" y="90" width="24" height="28" rx="11" fill="#F5AC63"/>
+            <rect x="80" y="90" width="24" height="28" rx="11" fill="#F5AC63"/>
+            <path d="M50 104 v9 M58 104 v9" stroke="#DE8B3A" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M88 104 v9 M96 104 v9" stroke="#DE8B3A" stroke-width="2.2" stroke-linecap="round"/>
+  <g transform="translate(21 0) scale(1.35)">
+    <path d="M12.5 30 Q9.5 10 26.5 17.5 Z" fill="#F0A05A"/>
+    <path d="M51.5 30 Q54.5 10 37.5 17.5 Z" fill="#F0A05A"/>
+    <path d="M15.5 26.5 Q14.5 15.5 24 19.5 Z" fill="#F9CFC0"/>
+    <path d="M48.5 26.5 Q49.5 15.5 40 19.5 Z" fill="#F9CFC0"/>
+    <ellipse cx="32" cy="38" rx="23" ry="20.5" fill="#F5AC63"/>
+    <rect x="25.8" y="19.5" width="3.2" height="7.5" rx="1.6" fill="#DE8B3A" transform="rotate(-7 27.4 23.2)"/>
+    <rect x="30.4" y="18.4" width="3.2" height="8.5" rx="1.6" fill="#DE8B3A"/>
+    <rect x="35" y="19.5" width="3.2" height="7.5" rx="1.6" fill="#DE8B3A" transform="rotate(7 36.6 23.2)"/>
+    <ellipse cx="32" cy="45" rx="13.5" ry="9.5" fill="#FFF6EC"/>
+    <g class="peek-eye"><circle cx="24" cy="37.5" r="4.4" fill="#432E24"/><circle cx="25.7" cy="35.8" r="1.5" fill="#fff"/></g>
+    <g class="peek-eye"><circle cx="40" cy="37.5" r="4.4" fill="#432E24"/><circle cx="41.7" cy="35.8" r="1.5" fill="#fff"/></g>
+    <path d="M29.8 43.4 Q32 45.8 34.2 43.4" stroke="#432E24" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="16.8" cy="43.5" rx="4.2" ry="2.6" fill="#F9C4C4" opacity=".9"/>
+    <ellipse cx="47.2" cy="43.5" rx="4.2" ry="2.6" fill="#F9C4C4" opacity=".9"/>
+  </g>          </svg>
         </div>
       </div>
     </section>
